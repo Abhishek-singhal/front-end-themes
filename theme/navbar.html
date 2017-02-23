@@ -14,15 +14,29 @@
       width: 70%;
       margin: auto;
   }
+    body {
+      position: relative; 
+  }
+  #section1 {padding-top:50px;}
+  #section2 {padding-top:50px;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section41 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section42 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
   </style>
-<body>
-	<nav class="navbar navbar-inverse ">
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-inverse  navbar-fixed-top ">
 	<div class="container-fluid">
 		<div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
 			<a class="navbar-brand" href="#">WebsiteName</a>
 		</div>
+    <div class="collapse navbar-collapse" id="myNavbar">
 		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
+			<li class="active"><a href="#section1">Home</a></li>
 			<li class="dropdown">
 				<a class= "dropdown-toggle" data-toggle="dropdown" href="#">Page1<span class="caret"></span></a>
 				
@@ -32,8 +46,9 @@
 					<li><a href="#">Page1.3</a></li>
 				</ul>
 			</li>
-			<li><a href="#">Page2</a></li>
-			<li><a href="#">Page3</a></li>
+			<li><a href="#section2">Page2</a></li>
+			<li><a href="#section3">Page3</a></li>
+      <li><a href="#section4">Page3</a></li>
 		</ul>
 		<form class="navbar-form navbar-right" >
 		<div class="form-group">
@@ -41,7 +56,7 @@
         	<input type="text" class="form-control" placeholder="passsword">
         </div>
         	<button type="submit" class="btn btn-default">
-        	<span class="glyphicon glyphicon-log-in"> Log-in</button>
+        	<span class="glyphicon glyphicon-log-in"> Log-in</span></button>
 <!-- 		 <div class="input-group">
 
         	<div class="input-group-btn">
@@ -57,8 +72,9 @@
 			<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
 		</ul>
 	</div>
+  </div>
 	 </nav>
-<div class="container">
+<div id="section1" class="container" style="padding: 50px;">
 	<br>
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -116,6 +132,8 @@
       <span class="sr-only">Next</span>
     </a>
   </div>
+</div>
+<div id="section2" class="container">
   <h2>Form control: textarea</h2>
   <p>The form below contains a textarea for comments:</p>
   <form>
@@ -133,6 +151,11 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+</div>
+<div id="section3" class="container-fluid">
+  <h1>Section 3</h1>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
 </div>
 </body>
 </html>
